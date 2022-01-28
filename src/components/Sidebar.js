@@ -3,35 +3,53 @@ import Styled from "styled-components";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import logo from "../assets/walmart.svg";
+import { useProductsContext } from "../contexts/productsContext";
+import CartButtons from "./CartButtons";
 
 function Sidebar() {
-  const isOpen = false;
+  const { isSidebarOpen, closeSidebar } = useProductsContext();
+
   return (
     <Wrapper>
-      <aside className={`${isOpen ? "sidebar show-sidebar" : "sidebar"}`}>
+      <aside
+        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+      >
         <header className="header">
           <img src={logo} className="logo" />
-          <button onClick={() => console.log("button clicked")} type="button">
+          <button onClick={() => closeSidebar()} type="button">
             <MdClose />
           </button>
         </header>
 
         <ul className="nav-links">
           <li className="nav-item">
-            <Link to="/" className="nav-item-link">
+            <Link
+              to="/"
+              className="nav-item-link"
+              onClick={() => closeSidebar()}
+            >
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-item-link">
+            <Link
+              to="/about"
+              className="nav-item-link"
+              onClick={() => closeSidebar()}
+            >
               About
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/cart" className="nav-item-link">
+            <Link
+              to="/cart"
+              className="nav-item-link"
+              onClick={() => closeSidebar()}
+            >
               Cart
             </Link>
           </li>
+          <CartButtons />
         </ul>
       </aside>
     </Wrapper>

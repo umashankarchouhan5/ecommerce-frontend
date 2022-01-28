@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import Styled from "styled-components";
 import { MdMenu } from "react-icons/md";
 import logo from "../assets/walmart.svg";
+import { useProductsContext } from "../contexts/productsContext";
+import CartButtons from "./CartButtons";
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
   return (
     <Wrapper>
       <img src={logo} className="logo" />
@@ -19,13 +22,10 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/cart" className="nav-item-link">
-            Cart
-          </Link>
-        </li>
+
+        <CartButtons />
       </ul>
-      <button className="nav-toogle">
+      <button className="nav-toogle" onClick={openSidebar}>
         {" "}
         <MdMenu />
       </button>
@@ -35,6 +35,11 @@ const Navbar = () => {
 
 const Wrapper = Styled.nav`
 display: flex;
+position: sticky;
+
+top:0;
+left:0;
+width: 100%;
 height:60px;
 justify-content:space-between;
 align-items:center;

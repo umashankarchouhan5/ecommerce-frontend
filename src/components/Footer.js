@@ -10,7 +10,9 @@ function Footer() {
 }
 
 const Wrapper = Styled.footer`
-height:20vh;
+
+
+
 background:black;
 color:white;
 display: flex;

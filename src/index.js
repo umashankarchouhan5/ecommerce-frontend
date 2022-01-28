@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { ProductsProvider } from "./contexts/productsContext";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProductsProvider>
+      <App />
+    </ProductsProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

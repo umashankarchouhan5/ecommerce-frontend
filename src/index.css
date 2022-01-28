@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.full-width {
+  height: 100vh;
+}
+.underline {
+  width: 50px;
+  height: 3px;
+  background-color: #219f94;
+}
