@@ -9,7 +9,7 @@ const Navbar = () => {
   const { openSidebar } = useProductsContext();
   return (
     <Wrapper>
-      <img src={logo} className="logo" />
+      <img src={logo} className="logo" alt="logo" />
 
       <ul className="nav-links">
         <li className="nav-item">
@@ -35,24 +35,29 @@ const Navbar = () => {
 
 const Wrapper = Styled.nav`
 display: flex;
-position: sticky;
+position:fixed;
 
 top:0;
 left:0;
+z-index:10;
 width: 100%;
 height:60px;
+
 justify-content:space-between;
-align-items:center;
+align-content:center;
+
 background:grey;
 .logo{
     width: 100px;
-    height: 100%;
+    
 }
 
 .nav-links{
  display:flex;
 list-style-type:none;
+align-self:center;
 width:90vw;
+margin:0;
 justify-content:space-between;
 
 

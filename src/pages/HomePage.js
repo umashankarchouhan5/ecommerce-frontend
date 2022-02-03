@@ -1,7 +1,8 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Styled from "styled-components";
-import { furniture1, furniture2, furniture3 } from "../assets";
+import { furniture1, furniture2, furniture4 } from "../assets";
+import { Services, Contacts, FeaturedProducts } from "../components";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={furniture3} alt="Third slide" />
+          <img className="d-block w-100" src={furniture4} alt="Third slide" />
           <Carousel.Caption className="caption">
             <h5>Third furniture</h5>
             <p>
@@ -31,20 +32,27 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <FeaturedProducts />
+      <Services />
+      <Contacts />
     </Wrapper>
   );
 };
 
 const Wrapper = Styled.div`
+
 img{
-  height:40rem;
+  max-height:40rem;
   background-size:cover;
 }
 .caption{
   background-color:#7897AB;
+  opacity:0.5;
+  color:white;
+  
 
 }
-@media(max-width:500px){
+@media(max-width:600px){
   
 }
 `;

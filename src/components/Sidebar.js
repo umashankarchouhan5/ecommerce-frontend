@@ -15,7 +15,7 @@ function Sidebar() {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <header className="header">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo " />
           <button onClick={() => closeSidebar()} type="button">
             <MdClose />
           </button>
@@ -46,7 +46,7 @@ function Sidebar() {
               className="nav-item-link"
               onClick={() => closeSidebar()}
             >
-              Cart
+              Products
             </Link>
           </li>
           <CartButtons />
@@ -63,14 +63,15 @@ height: 100vh;
 top:0;
 left:0;
 width: 100%;
-background:white;
+background:grey;
 font-size:2rem;
 display:none;
 z-index:23;
 }
+
 .logo{
     width: 100px;
-    height: 100%;
+    
 }
 .show-sidebar{
     display: block;

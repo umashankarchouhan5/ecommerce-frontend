@@ -10,7 +10,7 @@ const CartButtons = () => {
   return (
     <Wrapper className="cart-buttons-wrapper">
       <li>
-        <Link to="/" onClick={closeSidebar}>
+        <Link to="/cart" onClick={closeSidebar}>
           <MdShoppingBasket />
           <span className="shopping_power">15</span>
         </Link>
@@ -28,9 +28,11 @@ const Wrapper = Styled.ul`
   display: flex;
   gap:2rem;
   list-style-type:none;
-  width:30%;
+  min-width:30%;
   height: 100%;
+  
   align-items:center;
+  justify-content:center;
   a{
       display: flex;
       position: relative;
