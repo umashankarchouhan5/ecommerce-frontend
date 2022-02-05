@@ -1,7 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
+
 
 function CartPage() {
-  return <div>cart page</div>;
+    
+  return <div>
+    cart
+  </div> ;
 }
 
 export default CartPage;

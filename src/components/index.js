@@ -6,6 +6,9 @@ import Services from "./Services";
 import Contacts from "./Contacts";
 import Loading from "./Loading";
 import FeaturedProducts from "./FeaturedProducts";
+import Error from "./Error"
+import ProductImages from "./ProductImages";
+import Rating from "./Rating"
 
 export {
   Footer,
@@ -16,4 +19,6 @@ export {
   Services,
   Contacts,
   Loading,
+  Error,
+  ProductImages,Rating
 };

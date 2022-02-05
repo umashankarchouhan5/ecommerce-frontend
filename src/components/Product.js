@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { MdSearch } from "react-icons/md";
 import { formatPrice } from "../utils/helpers";
 
-const Product = ({ name, price, image }) => {
+const Product = ({ name, price, image,_id:id }) => {
   return (
     <Wrapper className="m-1">
       <div className="image-container">
         <img src={image} alt={name} className="image" />
         <div className="hover-background"></div>
-        <Link to="/" className="image-link">
+        <Link to={`/products/${id}`} className="image-link">
           <MdSearch />
         </Link>
       </div>
