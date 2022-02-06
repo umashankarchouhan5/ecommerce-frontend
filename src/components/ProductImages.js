@@ -6,10 +6,13 @@ const ProductImages = ({ images=[], name }) => {
 
   
   return (
-    <Wrapper>
-      <img src={activeImage} alt={name} className="big-image" />
+    <Wrapper className="d-flex flex-column justify-content-center align-items-center">
+     
+      <img src={activeImage} alt={name} className="big-image " />
+      
+      
 
-      <div className="d-flex mt-3 thumbnail-container">
+      <div className="d-flex mt-3 thumbnail-container justify-content-stretch">
         {images &&
           images.map((image, index) => {
             return (
@@ -35,6 +38,7 @@ const Wrapper = Styled.div`
     height:400px;
     width:400px;
     background-size:cover;
+    
 
     @media(max-width:400px){
        
@@ -45,14 +49,18 @@ const Wrapper = Styled.div`
 .thumbnail-container{
     width:100%;
     overflow:hidden;
-    flex-wrap:wrap;
+   // flex-wrap:wrap;
+    margin:1rem 0;
     gap:10px;
 }
 .thumbnail{
-    max-height: 100px;
-    max-width: 100px;
-    cursor:pointer;
     
+    width: 18%;
+    cursor:pointer;
+
+    @media(max-width:310px){
+      width:16%;
+    }
 }  
 .active{
     border:2px solid red;
@@ -61,11 +69,13 @@ const Wrapper = Styled.div`
 }  
 
 @media(max-width:760px){
-        margin-top:5rem;
+        //margin-top:5rem;
         display: flex;
         flex-direction:column;
         align-items:center;
         justify-content:center;
     }
+
+    
 `;
 export default ProductImages;

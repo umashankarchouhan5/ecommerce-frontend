@@ -9,6 +9,7 @@ import FeaturedProducts from "./FeaturedProducts";
 import Error from "./Error"
 import ProductImages from "./ProductImages";
 import Rating from "./Rating"
+import AddToCart from "./AddToCart";
 
 export {
   Footer,
@@ -20,5 +21,5 @@ export {
   Contacts,
   Loading,
   Error,
-  ProductImages,Rating
+  ProductImages,Rating,AddToCart
 };
