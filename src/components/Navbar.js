@@ -18,6 +18,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
+          <Link to="/products" className="nav-item-link">
+            Products
+          </Link>
+        </li>
+
+        <li className="nav-item">
           <Link to="/about" className="nav-item-link">
             About
           </Link>
@@ -35,7 +41,7 @@ const Navbar = () => {
 
 const Wrapper = Styled.nav`
 display: flex;
-position:fixed;
+position:sticky;
 
 top:0;
 left:0;

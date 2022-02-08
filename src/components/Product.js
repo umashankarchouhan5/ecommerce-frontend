@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MdSearch } from "react-icons/md";
 import { formatPrice } from "../utils/helpers";
 
-const Product = ({ name, price, image,_id:id }) => {
+const Product = ({ name, price, image, _id: id }) => {
   return (
     <Wrapper className="m-1">
       <div className="image-container">
@@ -24,7 +24,8 @@ const Product = ({ name, price, image,_id:id }) => {
 };
 
 const Wrapper = Styled.div`
-  color:#F76E11;  
+  color:#F76E11; 
+   
   .image-container{
       position:relative;
       
@@ -62,6 +63,7 @@ const Wrapper = Styled.div`
   .image{
       height:100%;
       width:100%;
+    
       
       background-size:cover;
   }
