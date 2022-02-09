@@ -21,11 +21,13 @@ export const FilterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    dispatch({ type: LOAD_PRODUCTS, payload: products.products || [] });
+    dispatch({ type: LOAD_PRODUCTS, payload: products });
   }, [products]);
 
   return (
-    <FilterContext.Provider value={"text"}>{children}</FilterContext.Provider>
+    <FilterContext.Provider value={{ ...state }}>
+      {children}
+    </FilterContext.Provider>
   );
 };
 

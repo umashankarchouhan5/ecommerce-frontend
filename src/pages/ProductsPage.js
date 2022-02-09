@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+
 import { ProductList, Filter, Sort } from "../components";
 
 function ProductsPage() {

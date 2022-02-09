@@ -26,7 +26,7 @@ function FeaturedProducts() {
       <section className="d-md-flex justify-content-center align-items-center">
         {featuredProducts.slice(0, 3).map((product) => {
           const { _id: id } = product;
-          return <Product key={id} {...product} />;
+          return <Product key={id} {...product} />; //product-wrapper class used for css from Product component
         })}
       </section>
     </Wrapper>
@@ -34,7 +34,18 @@ function FeaturedProducts() {
 }
 
 const Wrapper = Styled.div`
-
+.product-wrapper{
+  max-width: 500px;
+  max-height:400px;
+}
+@media(max-width:770px){
+section{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+}
 
 `;
 

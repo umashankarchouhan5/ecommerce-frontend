@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/helpers";
 
 const Product = ({ name, price, image, _id: id }) => {
   return (
-    <Wrapper className="m-1">
+    <Wrapper className="m-1 product-wrapper">
       <div className="image-container">
         <img src={image} alt={name} className="image" />
         <div className="hover-background"></div>
@@ -15,7 +15,7 @@ const Product = ({ name, price, image, _id: id }) => {
         </Link>
       </div>
 
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-items-center product-footer ">
         <h3 className="h6">{name}</h3>
         <h6>{formatPrice(price)}</h6>
       </div>
@@ -50,7 +50,8 @@ const Wrapper = Styled.div`
       display:none;
       
      
-  }  
+  }
+
 
   .image-container:hover .hover-background {
       
@@ -61,11 +62,17 @@ const Wrapper = Styled.div`
       display:block;
   }
   .image{
-      height:100%;
-      width:100%;
+      height:180px;
+      width: 100%;
+      background-size:cover;
     
       
-      background-size:cover;
+      
+  }
+
+  .product-footer{
+    gap:1rem;
+    
   }
 
 `;

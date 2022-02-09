@@ -1,13 +1,15 @@
 import React from "react";
+import GridView from "./GridView";
+import ListView from "./ListView";
 
 const ProductList = () => {
+  if (true) {
+    return <ListView />;
+  }
+
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima porro
-      temporibus autem voluptatem laborum numquam delectus iure illum magnam
-      labore quasi eligendi repellat minus amet, nemo necessitatibus ipsa
-      voluptas corrupti facere optio earum adipisci tempora molestias
-      consequatur. Distinctio, ratione modi.
+      <GridView />
     </div>
   );
 };
