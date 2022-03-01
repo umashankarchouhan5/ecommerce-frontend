@@ -1,14 +1,14 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { ProductList, Filter, Sort } from "../components";
+import { ProductList, Filters, Sort } from "../components";
 
 function ProductsPage() {
   return (
     <div className="container">
       <Wrapper className="d-md-flex justify-content-center   ">
-        <Filter />
-        <div className="">
+        <Filters className="filters" />
+        <div className="w-100">
           <Sort />
           <ProductList />
         </div>
@@ -18,6 +18,7 @@ function ProductsPage() {
 }
 
 const Wrapper = Styled.div`
+
 
  gap:2rem;
  min-height:90vh;

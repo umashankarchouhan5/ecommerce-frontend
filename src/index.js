@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import { ProductsProvider } from "./contexts/productsContext";
 import { FilterProvider } from "./contexts/filterContext";
+import { CartProvider } from "./contexts/cartContext";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.css";
@@ -13,7 +15,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ProductsProvider>
       <FilterProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </FilterProvider>
     </ProductsProvider>
   </React.StrictMode>,

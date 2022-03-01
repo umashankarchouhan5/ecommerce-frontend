@@ -1,15 +1,23 @@
 import React from "react";
 import GridView from "./GridView";
 import ListView from "./ListView";
+import { useFilterContext } from "../contexts/filterContext";
+import { BsTypeH1 } from "react-icons/bs";
 
 const ProductList = () => {
-  if (true) {
-    return <ListView />;
+  const { gridView, filteredProducts } = useFilterContext();
+
+  if (filteredProducts.length <= 0) {
+    return <h3 className="text-center fw-bold">Sorry,No Products Found</h3>;
+  }
+
+  if (gridView) {
+    return <GridView />;
   }
 
   return (
     <div>
-      <GridView />
+      <ListView />
     </div>
   );
 };

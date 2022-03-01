@@ -3,13 +3,12 @@ import { useFilterContext } from "../contexts/filterContext";
 import Styled from "styled-components";
 import Product from "./Product";
 const GridView = () => {
-  const { allProducts: products, filteredProducts } = useFilterContext();
-  console.log(products);
+  const { filteredProducts: products } = useFilterContext();
 
   return (
     <Wrapper className="d-flex flex-wrap">
       {products.map((product) => {
-        return <Product {...product} className="product" key={product.id} />;
+        return <Product {...product} className="product" key={product._id} />;
       })}
     </Wrapper>
   );

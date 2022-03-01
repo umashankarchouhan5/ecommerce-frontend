@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsCheck } from "react-icons/bs";
+import { useCartContext } from "../contexts/cartContext";
 import ProductAmount from "./ProductAmount";
 
 const AddToCart = ({ product }) => {

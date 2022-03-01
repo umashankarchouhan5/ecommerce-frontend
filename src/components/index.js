@@ -11,7 +11,7 @@ import ProductImages from "./ProductImages";
 import Rating from "./Rating";
 import AddToCart from "./AddToCart";
 import ProductList from "./ProductList";
-import Filter from "./Filter";
+import Filters from "./Filters";
 import Sort from "./Sort";
 
 export {
@@ -28,6 +28,6 @@ export {
   Rating,
   AddToCart,
   ProductList,
-  Filter,
+  Filters,
   Sort,
 };

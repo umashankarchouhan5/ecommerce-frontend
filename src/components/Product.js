@@ -16,7 +16,7 @@ const Product = ({ name, price, image, _id: id }) => {
       </div>
 
       <div className="d-flex justify-content-between align-items-center product-footer ">
-        <h3 className="h6">{name}</h3>
+        <h3 className="h6 text-capitalize">{name}</h3>
         <h6>{formatPrice(price)}</h6>
       </div>
     </Wrapper>

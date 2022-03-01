@@ -42,7 +42,7 @@ function Sidebar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/cart"
+              to="/products"
               className="nav-item-link"
               onClick={() => closeSidebar()}
             >
